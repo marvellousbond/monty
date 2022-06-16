@@ -1,19 +1,22 @@
-#include "monty.h"
+#include "main.h"
+
 
 /**
- * op_pall - Print the values on the stack
- * @stack: The stack
- * @line_number: The line number
+ * _pall - function
+ * @pile: the pile
+ * @line_number: the number
+ * Return: void
  */
-void op_pall(stack_t **stack, unsigned int line_number)
+
+void  _pall(stack_t **pile, unsigned  int line_number)
 {
-	stack_t *pos = *stack;
+	stack_t *ptr;
 
-	(void) line_number;
-
-	while (pos)
+	ptr = *pile;
+	while (ptr != NULL)
 	{
-		printf("%d\n", pos->n);
-		pos = pos->next;
+		printf("%d\n", ptr->n);
+		ptr = ptr->next;
 	}
+	UNUSED(line_number);
 }
